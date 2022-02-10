@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,80 +29,136 @@
   </head>
 
   <body>
-    <header>
-      <div class="header-wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light px-lg-4 shadow nav">
-          <div class="nav__sm d-lg-none">
-            <div class="placement-helper"></div>
-            <a class="navbar-brand d-lg-none m-0 nav__logo" href="index.html"
-              ><img src="images/Logo.png" alt="Logo for Shoes Up"
-            /></a>
-
-            <button
-              class="navbar-toggler nav__hamb-btn"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div
-              class="nav__collapse justify-content-lg-between align-items-center mr-4 pr-2 pr-lg-0 mr-lg-0 mt-2 mt-lg-0 justify-content-end"
-            >
-              <div class="nav__admin">
-                <div
-                  class="collapse navbar-collapse"
-                  id="navbarSupportedContent"
-                >
-                  <ul class="navbar-nav">
-                    <!-- Admin navigation, add with JS -->
-                  </ul>
-                </div>
-              </div>
-
-              <a
-                class="navbar-brand d-none d-lg-block m-0 nav__logo"
-                href="index.html"
+    <div class="wrapper">
+      <header>
+        <div class="header-wrapper">
+          <nav class="navbar navbar-expand-lg px-lg-4 shadow nav">
+            <div class="nav__sm d-lg-none">
+              <div class="placement-helper"></div>
+              <a class="navbar-brand d-lg-none m-0 nav__logo" href="index.html"
                 ><img src="images/Logo.png" alt="Logo for Shoes Up"
               /></a>
 
-              <ul class="navbar-nav ml-lg-auto">
-                <li class="nav-item nav__item active nav__item--active">
-                  <a
-                    class="nav-link nav__link nav__link--active"
-                    href="index.html"
-                    >Home <span class="sr-only">(current)</span></a
+              <button
+                class="navbar-toggler nav__hamb-btn"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div
+                class="nav__collapse justify-content-lg-between align-items-center mr-4 pr-2 pr-lg-0 mr-lg-0 mt-2 mt-lg-0 justify-content-end"
+              >
+                <div class="nav__admin">
+                  <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
                   >
-                </li>
-                <li class="nav-item nav__item">
-                  <a class="nav-link nav__link" href="products.html"
-                    >Products</a
+                    <ul class="navbar-nav">
+                      <!-- Admin navigation, add with JS -->
+                    </ul>
+                  </div>
+                </div>
+
+                <a
+                  class="navbar-brand d-none d-lg-block m-0 nav__logo"
+                  href="index.html"
+                  ><img src="images/Logo.png" alt="Logo for Shoes Up"
+                /></a>
+
+                <ul class="navbar-nav ml-lg-auto">
+                  <li class="nav-item nav__item active nav__item--active">
+                    <a
+                      class="nav-link nav__link nav__link--active"
+                      href="index.html"
+                      >Home <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item nav__item">
+                    <a class="nav-link nav__link" href="products.html"
+                      >Products</a
+                    >
+                  </li>
+                  <li class="nav-item nav__item">
+                    <a class="nav-link nav__link bag-icon"
+                      ><i class="fas fa-shopping-bag"></i
+                    ></a>
+                  </li>
+                  <li class="nav-item nav__item">
+                    <a class="nav-link nav__link login-icon"
+                      ><i class="fa-solid fa-user"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="main-wrapper">
+          <div class="container">TEST main</div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="footer-wrapper py-4">
+        <div class="container">
+          <div class="footer">
+            <div class="footer__contact">
+              <h3>Contact</h3>
+              <p>+47 987 65 432</p>
+              <p class="mb-4">contact@shoesup.com</p>
+              <p>Peach Street 12</p>
+              <p>1234, Oslo</p>
+              <p>Norway</p>
+            </div>
+
+            <div
+              class="footer__follow d-flex flex-column align-items-lg-center"
+            >
+              <h3>Follow us</h3>
+              <div>
+                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+              </div>
+            </div>
+
+            <div class="footer__newsletter">
+              <h3>Sign up for our newsletter</h3>
+              <div class="input-group mt-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Recipient's username"
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    id="button-addon2"
                   >
-                </li>
-                <li class="nav-item nav__item">
-                  <a class="nav-link nav__link bag-icon"
-                    ><span class="material-icons"> shopping_bag </span></a
-                  >
-                </li>
-                <li class="nav-item nav__item">
-                  <a class="nav-link nav__link login-icon"
-                    ><span class="material-icons"> person </span></a
-                  >
-                </li>
-              </ul>
+                    Button
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </nav>
+        </div>
+        <p class="text-center">&copy; 2022 Shoes Up</p>
       </div>
-    </header>
-    <main></main>
-    <footer></footer>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

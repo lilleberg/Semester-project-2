@@ -1,0 +1,14 @@
+.footer-wrapper {
+  background-color: $color-secondary;
+}
+
+@media only screen and (min-width: 991px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    &__newsletter {
+      justify-self: end;
+    }
+  }
+}
