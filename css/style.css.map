@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AIAA,AAAA,IAAI,CAAC;EACH,gBAAgB,EHDF,OAAO;CGyCtB;;AAtCE,AAAD,cAAW,CAAC;EACV,OAAO,EAAE,IAAI;CACd;;AAEA,AAAD,UAAO,CAAC,GAAG,CAAC;EACV,KAAK,EAAE,KAAK;CACb;;AAEA,AAAD,QAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,YAAY;EACnC,IAAI,EAAE,CAAC;CACR;;AAEA,AAAD,cAAW,CAAC;EACV,MAAM,EAAE,IAAI;EACZ,YAAY,EAAE,GAAG;CAClB;;AApBH,AAsBE,IAtBE,CAsBF,EAAE,CAAC;EACD,eAAe,EAAE,GAAG;CACrB;;AAED,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EACrC,AAAD,cAAW,CAAC;IACV,OAAO,EAAE,IAAI;IACb,qBAAqB,EAAE,YAAY;IACnC,IAAI,EAAE,CAAC;GACR;EAEA,AAAD,UAAO,CAAC;IACN,YAAY,EAAE,MAAM;GAKrB;EANA,AAGC,UAHK,CAGL,GAAG,CAAC;IACF,KAAK,EAAE,KAAK;GACb",
+    "sources": [
+        "../sass/style.scss",
+        "../sass/partials/_global.scss",
+        "../sass/partials/_typography.scss",
+        "../sass/partials/_layout.scss",
+        "../sass/partials/_nav.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

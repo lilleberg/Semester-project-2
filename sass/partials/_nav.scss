@@ -1,0 +1,42 @@
+.nav {
+  background-color: $color-primary;
+
+  &__collapse {
+    display: flex;
+  }
+
+  &__logo img {
+    width: 100px;
+  }
+
+  &__sm {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    flex: 1;
+  }
+
+  &__hamb-btn {
+    border: none;
+    justify-self: end;
+  }
+
+  &__item--active {
+    background-color: darken(10%, $color-primary);
+  }
+
+  @media only screen and (min-width: 991px) {
+    &__collapse {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      flex: 1;
+    }
+
+    &__logo {
+      justify-self: center;
+
+      img {
+        width: 150px;
+      }
+    }
+  }
+}
