@@ -2,6 +2,7 @@ $color-primary: #faf00d;
 $color-secondary: #21e1ff;
 $color-white: #f0f0f0;
 $color-black: #1c1c1c;
+$gradient-yellow: linear-gradient(#d8d017 15%, $color-primary, #d8d017 85%);
 
 $border-radius: 5px;
 
@@ -9,4 +10,16 @@ $border-radius: 5px;
   background-image: url("../../images/sneaker-fabric.png");
   background-repeat: repeat;
   //background-color: $color-primary;
+}
+
+input,
+.footer input,
+.footer button {
+  border-radius: $border-radius;
+  border: 1px solid $color-black;
+}
+
+.footer button {
+  background-image: $gradient-yellow;
+  color: $color-black;
 }

@@ -29,7 +29,7 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="flex-wrapper">
       <header>
         <div class="header-wrapper">
           <nav class="navbar navbar-expand-lg px-lg-4 shadow nav">
@@ -48,7 +48,7 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars"></i>
               </button>
             </div>
 
@@ -81,18 +81,18 @@
                       >Home <span class="sr-only">(current)</span></a
                     >
                   </li>
-                  <li class="nav-item nav__item">
+                  <li class="nav-item nav__item ml-lg-3">
                     <a class="nav-link nav__link" href="products.html"
                       >Products</a
                     >
                   </li>
-                  <li class="nav-item nav__item">
-                    <a class="nav-link nav__link bag-icon"
+                  <li class="nav-item nav__item mx-lg-3">
+                    <a class="nav-link nav__link bag-icon" href="#"
                       ><i class="fas fa-shopping-bag"></i
                     ></a>
                   </li>
                   <li class="nav-item nav__item">
-                    <a class="nav-link nav__link login-icon"
+                    <a class="nav-link nav__link login-icon" href="#"
                       ><i class="fa-solid fa-user"></i
                     ></a>
                   </li>
@@ -109,12 +109,13 @@
         </div>
       </main>
     </div>
+
     <footer>
-      <div class="footer-wrapper py-4">
+      <div class="footer-wrapper pt-4 pb-2">
         <div class="container">
-          <div class="footer">
+          <div class="footer text-center text-lg-left">
             <div class="footer__contact">
-              <h3>Contact</h3>
+              <h3 class="mb-2">Contact</h3>
               <p>+47 987 65 432</p>
               <p class="mb-4">contact@shoesup.com</p>
               <p>Peach Street 12</p>
@@ -123,40 +124,42 @@
             </div>
 
             <div
-              class="footer__follow d-flex flex-column align-items-lg-center"
+              class="footer__follow d-flex flex-column align-items-lg-center py-4 my-4 py-lg-0 my-lg-0"
             >
-              <h3>Follow us</h3>
+              <h3 class="mb-4">Follow us</h3>
               <div>
                 <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="#"
+                  ><i class="fa-brands fa-instagram-square mx-4"></i
+                ></a>
                 <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
               </div>
             </div>
 
             <div class="footer__newsletter">
               <h3>Sign up for our newsletter</h3>
-              <div class="input-group mt-4">
+              <div class="input-group mt-4 mx-auto">
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Recipient's username"
-                  aria-label="Recipient's username"
+                  placeholder="Email address"
+                  aria-label="Email address"
                   aria-describedby="button-addon2"
                 />
-                <div class="input-group-append">
+                <div class="input-group-append shadow">
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
                     id="button-addon2"
                   >
-                    Button
+                    Sign up
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <p class="text-center">&copy; 2022 Shoes Up</p>
+        <p class="text-center mt-4">&copy; 2022 Shoes Up</p>
       </div>
     </footer>
 

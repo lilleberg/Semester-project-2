@@ -2,6 +2,21 @@
   background-color: $color-secondary;
 }
 
+.footer {
+  i {
+    font-size: 2rem;
+  }
+
+  .input-group {
+    max-width: 350px;
+
+    input {
+      height: auto;
+      border-right: none;
+    }
+  }
+}
+
 @media only screen and (min-width: 991px) {
   .footer {
     display: grid;

@@ -37,7 +37,7 @@ p,
 }
 
 a,
-button {
+button:not(.nav__hamb-btn) {
   font-family: "Roboto", "Segoe UI", Verdana;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
