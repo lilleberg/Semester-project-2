@@ -72,8 +72,8 @@ button:not(.nav__hamb-btn) {
 
 .flex-wrapper main {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .nav {
