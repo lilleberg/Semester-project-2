@@ -1,6 +1,11 @@
 .nav {
   background-color: $color-primary;
 
+  &__item {
+    align-self: center;
+    padding: 10px 0;
+  }
+
   &__collapse {
     display: flex;
   }
@@ -24,13 +29,12 @@
     font-size: 1.5rem;
   }
 
-  &__link {
+  &__link,
+  &__link i {
     text-align: center;
-    padding: 3px 5px;
-    text-underline-offset: 5px;
 
     &:hover {
-      color: lighten($color-black, 40%);
+      color: lighten($color-black, 30%);
       text-decoration: dashed;
     }
 
@@ -45,6 +49,10 @@
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       flex: 1;
+    }
+
+    &__item {
+      padding: 0;
     }
 
     &__logo {

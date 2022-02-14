@@ -1,8 +1,18 @@
-.flex-wrapper {
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+.content-wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
 
-  main {
-    flex-grow: 1;
-  }
+main {
+  flex-grow: 1;
 }

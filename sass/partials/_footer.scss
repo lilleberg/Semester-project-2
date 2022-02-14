@@ -9,11 +9,11 @@
 
   .input-group {
     max-width: 350px;
+  }
 
-    input {
-      height: auto;
-      border-right: none;
-    }
+  button {
+    background-image: $gradient-yellow;
+    color: $color-black;
   }
 }
 

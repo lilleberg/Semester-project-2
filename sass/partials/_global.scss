@@ -4,22 +4,36 @@ $color-white: #f0f0f0;
 $color-black: #1c1c1c;
 $gradient-yellow: linear-gradient(#d8d017 15%, $color-primary, #d8d017 85%);
 
+$border: 1px solid $color-black;
 $border-radius: 5px;
 
-.wrapper {
-  background-image: url("../../images/sneaker-fabric.png");
+main {
+  background-image: url("../../images/concrete-wall.png");
   background-repeat: repeat;
-  //background-color: $color-primary;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+.input-group button {
+  border: 1px solid;
 }
 
 input,
 .footer input,
-.footer button {
+.main input {
   border-radius: $border-radius;
-  border: 1px solid $color-black;
+  border: $border;
+  height: auto;
+  border-right: none;
+
+  &:focus {
+    box-shadow: 1px 0 5px lighten($color-black, 50%);
+  }
 }
 
-.footer button {
-  background-image: $gradient-yellow;
-  color: $color-black;
+.bg-light-grey {
+  background-color: $color-white;
+  padding: 20px 0;
 }
