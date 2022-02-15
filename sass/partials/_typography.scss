@@ -6,9 +6,15 @@ h3,
 i,
 button,
 .input-group input,
-.input-group button {
+.input-group button,
+label {
   color: $color-black;
   margin: 0;
+}
+
+label {
+  color: $color-black;
+  padding-bottom: 5px;
 }
 
 h1,
@@ -16,6 +22,19 @@ h2,
 h3 {
   font-family: "Merriweather", "Open Sans", "Segoe UI", Verdana;
   padding: 0;
+}
+
+p,
+.nav__link,
+label {
+  font-family: "Open Sans", "Segoe UI", Verdana;
+  font-size: 1rem;
+}
+
+a,
+button:not(.nav__hamb-btn) {
+  font-family: "Roboto", "Segoe UI", Verdana;
+  font-size: 1.1rem;
 }
 
 h1 {
@@ -30,16 +49,4 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-}
-
-p,
-.nav__link {
-  font-family: "Open Sans", "Segoe UI", Verdana;
-  font-size: 1rem;
-}
-
-a,
-button:not(.nav__hamb-btn) {
-  font-family: "Roboto", "Segoe UI", Verdana;
-  font-size: 1.1rem;
 }
