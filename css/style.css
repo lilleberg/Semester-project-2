@@ -46,13 +46,13 @@ i,
 button,
 .input-group input,
 .input-group button,
-label {
+label,
+.btn a {
   color: #1c1c1c;
   margin: 0;
 }
 
 label {
-  color: #1c1c1c;
   padding-bottom: 5px;
 }
 
@@ -73,7 +73,11 @@ label {
 a,
 button:not(.nav__hamb-btn) {
   font-family: "Roboto", "Segoe UI", Verdana;
-  font-size: 1.1rem;
+}
+
+a,
+.btn a {
+  text-decoration: none;
 }
 
 h1 {
@@ -116,6 +120,24 @@ main {
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 50px 0;
+}
+
+.btn-yw {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #d8d017), color-stop(#faf00d), color-stop(85%, #d8d017));
+  background-image: linear-gradient(#d8d017 15%, #faf00d, #d8d017 85%);
+  color: #1c1c1c;
+  -webkit-box-shadow: 3px 3px 5px #c4c4c4;
+          box-shadow: 3px 3px 5px #c4c4c4;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-yw:hover {
+  background-image: none;
+  background-color: #cac527;
+  -webkit-box-shadow: 0 0 5px 3px #c4c4c4;
+          box-shadow: 0 0 5px 3px #c4c4c4;
 }
 
 .nav {
@@ -209,13 +231,8 @@ main {
   max-width: 250px;
 }
 
-.discount__btn {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #d8d017), color-stop(#faf00d), color-stop(85%, #d8d017));
-  background-image: linear-gradient(#d8d017 15%, #faf00d, #d8d017 85%);
-}
-
 .footer-wrapper {
-  background-color: #d5f9ff;
+  background-color: #75dff1;
 }
 
 .footer i {
@@ -224,12 +241,6 @@ main {
 
 .footer .input-group {
   max-width: 350px;
-}
-
-.footer button {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #d8d017), color-stop(#faf00d), color-stop(85%, #d8d017));
-  background-image: linear-gradient(#d8d017 15%, #faf00d, #d8d017 85%);
-  color: #1c1c1c;
 }
 
 @media only screen and (min-width: 991px) {

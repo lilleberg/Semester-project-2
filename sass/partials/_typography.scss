@@ -7,13 +7,13 @@ i,
 button,
 .input-group input,
 .input-group button,
-label {
+label,
+.btn a {
   color: $color-black;
   margin: 0;
 }
 
 label {
-  color: $color-black;
   padding-bottom: 5px;
 }
 
@@ -34,7 +34,11 @@ label {
 a,
 button:not(.nav__hamb-btn) {
   font-family: "Roboto", "Segoe UI", Verdana;
-  font-size: 1.1rem;
+}
+
+a,
+.btn a {
+  text-decoration: none;
 }
 
 h1 {

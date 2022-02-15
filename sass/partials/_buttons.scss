@@ -1,0 +1,14 @@
+.btn-yw {
+  background-image: $btn-yw;
+  color: $color-black;
+  box-shadow: $shadow;
+  border: $border;
+  border-radius: $border-radius;
+  outline: none;
+
+  &:hover {
+    background-image: none;
+    background-color: $btn-yw-hover;
+    box-shadow: $shadow-hover;
+  }
+}
