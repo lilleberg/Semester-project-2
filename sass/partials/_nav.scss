@@ -3,7 +3,6 @@
 
   &__item {
     align-self: center;
-    padding: 10px 0;
   }
 
   &__collapse {
@@ -15,7 +14,6 @@
   }
 
   &__sm {
-    display: grid;
     grid-template-columns: 1fr auto 1fr;
     flex: 1;
   }
@@ -35,12 +33,13 @@
 
     &:hover {
       color: lighten($color-black, 30%);
-      text-decoration: dashed;
     }
 
     &--active {
       border-radius: $border-radius;
       font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 5px;
     }
   }
 

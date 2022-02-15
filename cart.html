@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="View the products in your cart." />
+    <title>Shoes Up | Shopping Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&family=Roboto:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="content-wrapper">
+      <header>
+        <div class="header-wrapper shadow">
+          <nav class="navbar navbar-expand-lg px-lg-4 nav">
+            <div class="nav__sm d-grid d-lg-none">
+              <div class="placement-helper"></div>
+              <a class="navbar-brand d-lg-none m-0 nav__logo" href="index.html"
+                ><img src="images/Logo.png" alt="Logo for Shoes Up"
+              /></a>
+
+              <button
+                class="navbar-toggler nav__hamb-btn"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div
+                class="nav__collapse justify-content-lg-between align-items-center mr-4 pr-2 pr-lg-0 mr-lg-0 mt-2 mt-lg-0 justify-content-end"
+              >
+                <div class="nav__admin">
+                  <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    <ul class="navbar-nav menu">
+                      <!-- Admin navigation, add with JS -->
+                    </ul>
+                  </div>
+                </div>
+
+                <a
+                  class="navbar-brand d-none d-lg-block m-0 nav__logo"
+                  href="index.html"
+                  ><img src="images/Logo.png" alt="Logo for Shoes Up"
+                /></a>
+
+                <ul class="navbar-nav py-2 py-lg-0 ml-lg-auto">
+                  <li class="nav-item nav__item">
+                    <a class="nav-link nav__link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item nav__item active ml-lg-3">
+                    <a class="nav-link nav__link" href="products.html"
+                      >Products</a
+                    >
+                  </li>
+                  <li class="nav-item nav__item nav__item--active mx-lg-3">
+                    <a
+                      class="nav-link nav__link nav__link--active bag-icon"
+                      href="cart.html"
+                      ><i
+                        class="fas fa-shopping-bag"
+                        aria-label="Shopping bag"
+                      ></i
+                      ><span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item nav__item">
+                    <a class="nav-link nav__link login-icon" href="login.html"
+                      ><i class="fa-solid fa-user" aria-label="Sign in"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="main-wrapper main">
+          <h1 class="text-center">Shopping cart</h1>
+
+          <div class="bg-light-grey cart">
+            <div class="container">
+              <div class="prod-info">
+                <div class="prod-info__product">
+                  <p>Product</p>
+                </div>
+                <div class="prod-info__quantity">
+                  <p>Quantity</p>
+                </div>
+                <div class="prod-info__price">
+                  <p>Price</p>
+                </div>
+              </div>
+
+              <div class="prod-info__empty-basket">
+                <p>Empty basket</p>
+              </div>
+
+              <div>
+                <div class="input-group discount shadow">
+                  <input
+                    type="text"
+                    class="form-control discount__input"
+                    placeholder="Discount code"
+                    aria-label="Add discount code"
+                    aria-describedby="button-discount"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary discount__btn"
+                      type="button"
+                      id="button-search"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                </div>
+                <div class="cost">
+                  <div class="cost__delivery">
+                    <p>Delivery cost</p>
+                    <p>Subtotal</p>
+                  </div>
+                  <div class="cost__total"></div>
+                </div>
+              </div>
+
+              <div class="cart__buttons">
+                <button class="btn">
+                  <a href="products.html">Continue shopping</a>
+                </button>
+                <button class="btn">
+                  <a href="#">Checkout</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-wrapper pt-4 pb-2">
+          <div class="container">
+            <div class="footer text-center text-lg-left">
+              <div class="footer__contact">
+                <h3 class="mb-2">Contact</h3>
+                <p>+47 987 65 432</p>
+                <p class="mb-4">contact@shoesup.com</p>
+                <p>Peach Street 12</p>
+                <p>1234, Oslo</p>
+                <p>Norway</p>
+              </div>
+
+              <div
+                class="footer__follow d-flex flex-column align-items-lg-center py-4 my-4 py-lg-0 my-lg-0"
+              >
+                <h3 class="mb-4">Follow us</h3>
+                <div>
+                  <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                  <a href="#"
+                    ><i class="fa-brands fa-instagram-square mx-4"></i
+                  ></a>
+                  <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                </div>
+              </div>
+
+              <div class="footer__newsletter">
+                <h3>Sign up for our newsletter</h3>
+                <div class="input-group mt-4 mx-auto">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Email address"
+                    aria-label="Email address"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append shadow">
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-center mt-4">&copy; 2022 Shoes Up</p>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

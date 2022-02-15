@@ -1,5 +1,5 @@
 $color-primary: #faf00d;
-$color-secondary: #21e1ff;
+$color-secondary: #d5f9ff;
 $color-white: #f0f0f0;
 $color-black: #1c1c1c;
 $gradient-yellow: linear-gradient(#d8d017 15%, $color-primary, #d8d017 85%);
@@ -36,4 +36,8 @@ input,
 .bg-light-grey {
   background-color: $color-white;
   padding: 20px 0;
+}
+
+.d-grid {
+  display: grid;
 }
