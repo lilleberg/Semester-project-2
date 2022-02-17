@@ -111,25 +111,32 @@
 
           <div class="bg-light-grey">
             <div class="container">
-              <form>
-                <div class="form-group login">
+              <form class="login-form d-flex flex-column">
+                <div class="form-group login-form__group">
                   <label for="inputEmail">Email or username</label>
-                  <input type="email" class="form-control" id="inputEmail" />
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail"
+                    placeholder="Email or username"
+                  />
+                  <div class="form-error"></div>
                 </div>
-                <label for="exampleInputPassword1">Password</label>
-                <div class="form-group login">
+                <div class="form-group login-form__group">
+                  <label for="inputPassword">Password</label>
                   <input
                     type="password"
                     class="form-control"
-                    id="exampleInputPassword1"
+                    id="inputPassword"
+                    placeholder="Password"
                   />
+                  <div class="form-error"></div>
                 </div>
-                <button
-                  type="submit"
-                  class="btn btn-outline-secondary btn-yw mt-2"
-                >
-                  <a href="admin/products.html">Sign in</a>
-                </button>
+                <div class="login-form__login-btn align-self-center">
+                  <button type="submit" class="btn btn-yw login-form__btn mt-2">
+                    <a href="admin/products.html">Sign in</a>
+                  </button>
+                </div>
               </form>
             </div>
           </div>

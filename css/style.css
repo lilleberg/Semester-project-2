@@ -7,26 +7,6 @@ main {
   margin: 0 auto;
 }
 
-.input-group button {
-  border: 1px solid;
-}
-
-input,
-.footer input,
-.main input {
-  border-radius: 5px;
-  border: 1px solid #1c1c1c;
-  height: auto;
-  border-right: none;
-}
-
-input:focus,
-.footer input:focus,
-.main input:focus {
-  -webkit-box-shadow: 1px 0 5px #9c9c9c;
-          box-shadow: 1px 0 5px #9c9c9c;
-}
-
 .bg-light-grey {
   background-color: #f0f0f0;
   padding: 20px 0;
@@ -35,6 +15,26 @@ input:focus,
 .d-grid {
   display: -ms-grid;
   display: grid;
+}
+
+.input-group button {
+  border: 1px solid #1c1c1c;
+}
+
+.footer input,
+.main input,
+.input-group input {
+  border: 1px solid #1c1c1c !important;
+  border-radius: 5px;
+  height: auto;
+  border-right: none;
+}
+
+.footer input:focus,
+.main input:focus,
+.input-group input:focus {
+  -webkit-box-shadow: 1px 0 5px #9c9c9c;
+          box-shadow: 1px 0 5px #9c9c9c;
 }
 
 a,
@@ -138,6 +138,12 @@ main {
   background-color: #cac527;
   -webkit-box-shadow: 0 0 5px 3px #c4c4c4;
           box-shadow: 0 0 5px 3px #c4c4c4;
+}
+
+/*login form*/
+.login-form {
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 .nav {
