@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Admin | Edit products on Shoes Up" />
-    <title>Admin | Edit products</title>
+    <meta
+      name="description"
+      content="Admin | Overview of products - add, edit, delete."
+    />
+    <title>Admin | All products</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -22,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&family=Roboto:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -32,9 +35,7 @@
           <nav class="navbar navbar-expand-lg px-lg-4 nav">
             <div class="nav__sm d-grid d-lg-none">
               <div class="placement-helper"></div>
-              <a
-                class="navbar-brand d-lg-none m-0 nav__logo"
-                href="../index.html"
+              <a class="navbar-brand d-lg-none m-0 nav__logo" href="index.html"
                 ><img src="images/Logo.png" alt="Logo for Shoes Up"
               /></a>
 
@@ -55,39 +56,37 @@
               <div
                 class="nav__collapse justify-content-lg-between align-items-center mr-4 pr-2 pr-lg-0 mr-lg-0 mt-2 mt-lg-0 justify-content-end"
               >
-                <ul class="navbar-nav menu py-2 py-lg-0 ml-lg-auto">
+                <ul class="navbar-nav menu">
                   <!-- Admin navigation, add with JS -->
                 </ul>
 
                 <a
                   class="navbar-brand d-none d-lg-block m-0 nav__logo"
-                  href="../index.html"
+                  href="index.html"
                   ><img src="images/Logo.png" alt="Logo for Shoes Up"
                 /></a>
 
                 <ul class="navbar-nav py-2 py-lg-0 ml-lg-auto">
                   <li class="nav-item nav__item">
-                    <a class="nav-link nav__link" href="../index.html">Home</a>
+                    <a class="nav-link nav__link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item nav__item active ml-lg-3">
-                    <a class="nav-link nav__link" href="../products.html"
+                    <a class="nav-link nav__link" href="products.html"
                       >Products</a
                     >
                   </li>
                   <li class="nav-item nav__item mx-lg-3">
-                    <a class="nav-link nav__link bag-icon" href="../cart.html"
+                    <a class="nav-link nav__link bag-icon" href="cart.html"
                       ><i
                         class="fas fa-shopping-bag"
                         aria-label="Shopping bag"
                       ></i
                     ></a>
                   </li>
-                  <li class="nav-item nav__item">
-                    <a
-                      class="nav-link nav__link login-icon"
-                      href="../login.html"
-                      ><i class="fa-solid fa-user" aria-label="Sign in"></i
-                    ></a>
+                  <li class="nav-item nav__item login-icon-container">
+                    <a class="nav-link nav__link login-icon" href="login.html"
+                      ><i class="fa-solid fa-user" aria-label="Sign in"></i>></a
+                    >
                   </li>
                 </ul>
               </div>
@@ -98,7 +97,7 @@
 
       <main>
         <section class="main-wrapper main">
-          <h1 class="text-center">Sign in</h1>
+          <h1 class="text-center">Products</h1>
 
           <div class="bg-light-grey">
             <div class="container"></div>
@@ -156,6 +155,7 @@
       </footer>
     </div>
 
+    <script src="../js/admin-products.js" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

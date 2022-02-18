@@ -43,6 +43,12 @@
     }
   }
 
+  #logout {
+    border: none;
+    background-color: $color-primary;
+    font-style: italic;
+  }
+
   @media only screen and (min-width: 991px) {
     &__collapse {
       display: grid;
