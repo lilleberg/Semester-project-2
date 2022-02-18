@@ -112,29 +112,31 @@
           <div class="bg-light-grey">
             <div class="container">
               <form class="login-form d-flex flex-column">
+                <div class="message-container"></div>
+
                 <div class="form-group login-form__group">
-                  <label for="inputEmail">Email or username</label>
+                  <label for="username">Username</label>
                   <input
-                    type="email"
+                    type="username"
                     class="form-control"
-                    id="inputEmail"
-                    placeholder="Email or username"
+                    id="username"
+                    placeholder="Username"
                   />
                   <div class="form-error"></div>
                 </div>
                 <div class="form-group login-form__group">
-                  <label for="inputPassword">Password</label>
+                  <label for="password">Password</label>
                   <input
                     type="password"
                     class="form-control"
-                    id="inputPassword"
+                    id="password"
                     placeholder="Password"
                   />
                   <div class="form-error"></div>
                 </div>
                 <div class="login-form__login-btn align-self-center">
                   <button type="submit" class="btn btn-yw login-form__btn mt-2">
-                    <a href="admin/products.html">Sign in</a>
+                    Sign in<!-- <a href="admin/products.html">Sign in</a> -->
                   </button>
                 </div>
               </form>
@@ -193,6 +195,7 @@
       </footer>
     </div>
 
+    <script src="js/login.js" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
