@@ -8,24 +8,25 @@ export default function createMenu() {
   const loginIcon = document.querySelector(".login-icon-container");
   const username = getUsername();
   console.log(username);
+  console.log(location.href);
 
   let authLink = "";
 
   if (username) {
-    authLink = `<li class="nav-item nav__item me-lg-3 ${
-      pathname === "/admin-products.html" ? "active nav__item--active" : ""
+    authLink = `<li class="nav-item nav__item mr-lg-3 ${
+      pathname === "/admin_products.html" ? "active nav__item--active" : ""
     }">
-      <a href="admin-products.html" class="nav-link nav__link ${
-        pathname === "/admin-products.html" ? "nav__link--active" : ""
+      <a href="admin_products.html" class="nav-link nav__link ${
+        pathname === "/admin_products.html" ? "nav__link--active" : ""
       }">
       All products</a>
     </li>
 
     <li class="nav-item nav__item ${
-      pathname === "/add-product.html" ? "active nav__item--active" : ""
+      pathname === "/add_product.html" ? "active nav__item--active" : ""
     }">
-      <a href="add-product.html" class="nav-link nav__link ${
-        pathname === "/add-product.html" ? "nav__link--active" : ""
+      <a href="add_product.html" class="nav-link nav__link ${
+        pathname === "/add_product.html" ? "nav__link--active" : ""
       }">
       Add</a>
     </li>

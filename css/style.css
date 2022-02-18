@@ -208,6 +208,10 @@ main {
   font-style: italic;
 }
 
+.nav #logout:hover {
+  color: dimgray;
+}
+
 @media only screen and (min-width: 991px) {
   .nav__collapse {
     display: -ms-grid;

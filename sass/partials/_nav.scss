@@ -47,6 +47,10 @@
     border: none;
     background-color: $color-primary;
     font-style: italic;
+
+    &:hover {
+      color: lighten($color-black, 30%);
+    }
   }
 
   @media only screen and (min-width: 991px) {
