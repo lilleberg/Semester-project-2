@@ -44,9 +44,9 @@
   }
 
   #logout {
-    border: none;
     background-color: $color-primary;
     font-style: italic;
+    border: none;
 
     &:hover {
       color: lighten($color-black, 30%);

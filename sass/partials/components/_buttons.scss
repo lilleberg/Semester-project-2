@@ -12,3 +12,16 @@
     box-shadow: $shadow-hover;
   }
 }
+
+.btn-blue {
+  background-image: $btn-blue;
+  color: $color-black;
+  box-shadow: $shadow;
+  outline: none;
+
+  &:hover {
+    background-image: none;
+    background-color: $btn-blue-hover;
+    box-shadow: $shadow-hover;
+  }
+}

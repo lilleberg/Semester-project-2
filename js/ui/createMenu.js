@@ -7,8 +7,6 @@ export default function createMenu() {
   const container = document.querySelector(".menu");
   const loginIcon = document.querySelector(".login-icon-container");
   const username = getUsername();
-  console.log(username);
-  console.log(location.href);
 
   let authLink = "";
 

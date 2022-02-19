@@ -4,12 +4,14 @@ $color-white: #f0f0f0;
 $color-black: #1c1c1c;
 $btn-yw: linear-gradient(#d8d017 15%, $color-primary, #d8d017 85%);
 $btn-yw-hover: #cac527;
+$btn-blue: linear-gradient(#28bfd5 15%, $color-secondary, #28bfd5 85%);
+$btn-blue-hover: #2ca1b3;
 
 $border: 1px solid $color-black;
 $border-radius: 5px;
 
-$shadow: 3px 3px 5px rgb(196, 196, 196);
-$shadow-hover: 0 0 5px 3px rgb(196, 196, 196);
+$shadow: 3px 3px 5px rgb(143, 143, 143);
+$shadow-hover: 0 0 5px 3px rgb(143, 143, 143);
 
 main {
   background-image: url("../../images/concrete-wall.png");
