@@ -11,10 +11,12 @@ export default function createMenu() {
   let authLink = "";
 
   if (username) {
-    authLink = `<li class="nav-item nav__item mr-lg-3 ${
+    authLink = `
+    <li class="nav-item nav__item"><p class="menu__admin">Admin:</p></li>
+    <li class="nav-item nav__item ${
       pathname === "/admin_products.html" ? "active nav__item--active" : ""
     }">
-      <a href="admin_products.html" class="nav-link nav__link ${
+      <a href="admin_products.html" class="nav-link nav__link mx-lg-3 ${
         pathname === "/admin_products.html" ? "nav__link--active" : ""
       }">
       All products</a>

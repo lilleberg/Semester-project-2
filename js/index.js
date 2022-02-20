@@ -4,8 +4,22 @@ import renderProducts from "./ui/renderProducts.js";
 
 createMenu();
 
-const url = baseUrl + "products?featured=true";
-console.log(url);
+const heroUrl = baseUrl + "/home";
+const heroContainer = document.querySelector(".jumbotron");
+(async function () {
+  try {
+    const response = await fetch(heroUrl);
+    const data = await response.json();
+
+    heroContainer.innerHTML += `
+      <img src="${baseUrl}${data.hero_banner.url}" alt="${data.hero_banner_alt_text}">
+    `;
+  } catch (error) {
+    console.log(error);
+  }
+})();
+
+const url = baseUrl + "/products?featured=true";
 
 (async function () {
   try {

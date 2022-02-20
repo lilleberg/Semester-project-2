@@ -7,6 +7,16 @@
 
   &__collapse {
     display: flex;
+    justify-content: space-between;
+
+    .menu {
+      align-self: start;
+
+      &__admin {
+        font-weight: bold;
+        padding: 8px 0;
+      }
+    }
   }
 
   &__logo img {
@@ -58,6 +68,10 @@
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       flex: 1;
+
+      .menu {
+        align-self: center;
+      }
     }
 
     &__item {
