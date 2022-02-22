@@ -2,7 +2,6 @@
   background-image: $btn-yw;
   color: $color-black;
   box-shadow: $shadow;
-  border: $border;
   border-radius: $border-radius;
   outline: none;
 
@@ -24,4 +23,8 @@
     background-image: none;
     box-shadow: $shadow-hover;
   }
+}
+
+.input-group button {
+  border: $border;
 }

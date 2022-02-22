@@ -1,12 +1,12 @@
 .products {
-  gap: 50px;
+  gap: 20px;
   justify-items: center;
   justify-content: center;
   border-radius: $border-radius;
 }
 
 .product {
-  width: 170px;
+  width: 210px;
 }
 
 .card {
@@ -20,8 +20,8 @@
 
   &__img {
     border-radius: 0;
-    width: 160px;
-    height: 200px;
+    width: 200px;
+    height: 230px;
     object-fit: cover;
   }
 
@@ -38,9 +38,30 @@
   .products {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .product {
+    width: 170px;
+  }
+
+  .card {
+    border: none;
+    padding: 10px 5px 0 5px;
+    box-shadow: $shadow;
+
+    &__body {
+      padding-bottom: 20px;
+    }
+
+    &__img {
+      border-radius: 0;
+      width: 160px;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
 }
 
-@media only screen and (min-width: 50px) {
+@media only screen and (min-width: 500px) {
   .product {
     width: 220px;
   }

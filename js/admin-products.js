@@ -3,7 +3,7 @@ import { baseUrl } from "./settings/api.js";
 
 createMenu();
 
-const container = document.querySelector(".products");
+const container = document.querySelector(".admin-products");
 const url = baseUrl + "/products";
 
 (async function () {

@@ -1,3 +1,71 @@
 .jumbotron {
   margin-bottom: 50px;
+  padding: 0;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  &__text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 300px;
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    p:nth-child(2) {
+      margin-bottom: 30px;
+    }
+
+    a {
+      font-size: 1.2rem;
+      border-radius: $border-radius;
+      padding: 5px 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .jumbotron {
+    &__text {
+      top: 10%;
+      right: 15%;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .jumbotron {
+    &__img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+
+    &__text {
+      top: 10%;
+      right: 10%;
+      height: auto;
+
+      p {
+        font-size: 2rem;
+      }
+
+      p:nth-child(2) {
+        margin-bottom: 50px;
+      }
+
+      a {
+        font-size: 1.5rem;
+        border-radius: $border-radius;
+        padding: 10px 20px;
+      }
+    }
+  }
 }

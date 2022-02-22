@@ -3,3 +3,16 @@
   margin: 0 auto;
   max-width: 400px;
 }
+
+.footer input,
+.main input,
+.input-group input {
+  border: $border !important;
+  border-radius: $border-radius;
+  height: auto;
+  border-right: none;
+
+  &:focus {
+    box-shadow: 1px 0 5px lighten($color-black, 50%);
+  }
+}

@@ -4,6 +4,7 @@ import renderProducts from "./ui/renderProducts.js";
 
 createMenu();
 
+/*Hero image part*/
 const heroUrl = baseUrl + "/home";
 const heroContainer = document.querySelector(".jumbotron");
 (async function () {
@@ -12,13 +13,14 @@ const heroContainer = document.querySelector(".jumbotron");
     const data = await response.json();
 
     heroContainer.innerHTML += `
-      <img src="${baseUrl}${data.hero_banner.url}" alt="${data.hero_banner_alt_text}">
+      <img src="${baseUrl}${data.hero_banner.url}" alt="${data.hero_banner_alt_text}" class="jumbotron__img">
     `;
   } catch (error) {
     console.log(error);
   }
 })();
 
+/* Featured products section */
 const url = baseUrl + "/products?featured=true";
 
 (async function () {

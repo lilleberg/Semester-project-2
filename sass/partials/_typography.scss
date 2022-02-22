@@ -8,7 +8,8 @@ button,
 .input-group input,
 .input-group button,
 label,
-.btn a {
+.btn a,
+.jumbotron a {
   color: $color-black;
   margin: 0;
 }
@@ -37,6 +38,7 @@ button:not(.nav__hamb-btn) {
 }
 
 a,
+.jumbotron a,
 .btn a,
 .products a {
   text-decoration: none;
