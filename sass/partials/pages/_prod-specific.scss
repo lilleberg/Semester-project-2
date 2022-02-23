@@ -1,0 +1,25 @@
+.bg-light-grey.prod-spec {
+  margin-bottom: 50px;
+}
+
+.prod-specific {
+  justify-content: center;
+
+  &__img {
+    width: 340px;
+    justify-self: center;
+  }
+
+  &__desc {
+    max-width: 400px;
+  }
+
+  &__price {
+    font-size: 1.2rem;
+  }
+
+  &__size {
+    max-width: 200px;
+    margin-bottom: 30px;
+  }
+}

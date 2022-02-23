@@ -1,9 +1,9 @@
 .admin-products {
+  justify-content: center;
+
   .sections__part {
     font-weight: bold;
   }
-
-  justify-content: center;
 
   .info:not(:last-child) {
     margin-bottom: 20px;
@@ -79,6 +79,8 @@
     }
 
     .info {
+      border: none !important;
+
       &__edit-del {
         display: grid;
         grid-template-columns: 1fr 1fr;

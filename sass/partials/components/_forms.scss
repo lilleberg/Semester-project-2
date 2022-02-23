@@ -1,12 +1,15 @@
 /*login form*/
-.login-form {
+.login-form,
+.add-form {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 350px;
 }
 
 .footer input,
 .main input,
-.input-group input {
+.input-group input,
+textarea,
+.custom-file {
   border: $border !important;
   border-radius: $border-radius;
   height: auto;
@@ -15,4 +18,9 @@
   &:focus {
     box-shadow: 1px 0 5px lighten($color-black, 50%);
   }
+}
+
+.form-group input,
+textarea {
+  box-shadow: $shadow;
 }

@@ -266,14 +266,17 @@ main {
 }
 
 /*login form*/
-.login-form {
+.login-form,
+.add-form {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 350px;
 }
 
 .footer input,
 .main input,
-.input-group input {
+.input-group input,
+textarea,
+.custom-file {
   border: 1px solid #1c1c1c !important;
   border-radius: 5px;
   height: auto;
@@ -282,9 +285,17 @@ main {
 
 .footer input:focus,
 .main input:focus,
-.input-group input:focus {
+.input-group input:focus,
+textarea:focus,
+.custom-file:focus {
   -webkit-box-shadow: 1px 0 5px #9c9c9c;
           box-shadow: 1px 0 5px #9c9c9c;
+}
+
+.form-group input,
+textarea {
+  -webkit-box-shadow: 3px 3px 5px #8f8f8f;
+          box-shadow: 3px 3px 5px #8f8f8f;
 }
 
 .nav {
@@ -475,6 +486,35 @@ main {
   }
 }
 
+.bg-light-grey.prod-spec {
+  margin-bottom: 50px;
+}
+
+.prod-specific {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.prod-specific__img {
+  width: 340px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.prod-specific__desc {
+  max-width: 400px;
+}
+
+.prod-specific__price {
+  font-size: 1.2rem;
+}
+
+.prod-specific__size {
+  max-width: 200px;
+  margin-bottom: 30px;
+}
+
 .discount {
   max-width: 220px;
   /* Why didn't this button work like the others? */
@@ -572,6 +612,9 @@ main {
   }
   .admin-products-md .sections {
     margin-bottom: 20px;
+  }
+  .admin-products-md .info {
+    border: none !important;
   }
   .admin-products-md .info__edit-del {
     display: -ms-grid;
