@@ -21,6 +21,10 @@ img {
   display: grid;
 }
 
+i {
+  cursor: pointer;
+}
+
 a,
 p,
 h1,
@@ -473,10 +477,68 @@ main {
 
 .discount {
   max-width: 220px;
+  /* Why didn't this button work like the others? */
 }
 
 .discount__btn {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+.admin-products .sections,
+.admin-products .info {
+  -ms-grid-columns: 3% 22% 12% 28% 7% 13%;
+      grid-template-columns: 3% 22% 12% 28% 7% 13%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.admin-products .sections {
+  margin-bottom: 20px;
+}
+
+.admin-products .sections__part {
+  font-weight: bold;
+}
+
+.admin-products .info:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.admin-products .info__desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.admin-products .info__img {
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.admin-products .info__edit-del {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.admin-products .info__edit-del i {
+  border: 3px solid #75dff1;
   border-radius: 5px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 8px;
 }
 
 .footer-wrapper {

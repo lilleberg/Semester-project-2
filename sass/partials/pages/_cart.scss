@@ -1,7 +1,9 @@
 .discount {
   max-width: 220px;
 
+  /* Why didn't this button work like the others? */
   &__btn {
-    border-radius: $border-radius;
+    border-top-right-radius: $border-radius !important;
+    border-bottom-right-radius: $border-radius !important;
   }
 }
