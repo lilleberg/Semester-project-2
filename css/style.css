@@ -485,18 +485,10 @@ main {
   border-bottom-right-radius: 5px !important;
 }
 
-.admin-products .sections,
-.admin-products .info {
-  -ms-grid-columns: 3% 22% 12% 28% 7% 13%;
-      grid-template-columns: 3% 22% 12% 28% 7% 13%;
+.admin-products {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 20px;
-}
-
-.admin-products .sections {
-  margin-bottom: 20px;
 }
 
 .admin-products .sections__part {
@@ -504,7 +496,23 @@ main {
 }
 
 .admin-products .info:not(:last-child) {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.admin-products .info:not(:last-child) {
+  border-bottom: 3px solid #75dff1;
+  padding-bottom: 20px;
+}
+
+.admin-products .info__section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.admin-products .info__section:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .admin-products .info__desc {
@@ -522,16 +530,22 @@ main {
 }
 
 .admin-products .info__edit-del {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.admin-products .info__edit-del #delete {
+  border: none;
+}
+
+.admin-products .info__edit-del #delete i {
+  padding: 8px 9px;
 }
 
 .admin-products .info__edit-del i {
   border: 3px solid #75dff1;
   border-radius: 5px;
+  background-color: #fff;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -539,6 +553,34 @@ main {
   width: -moz-min-content;
   width: min-content;
   padding: 8px;
+}
+
+.admin-products .info__edit-del i:hover {
+  color: dimgray;
+}
+
+/*Md screen and up*/
+@media only screen and (min-width: 768px) {
+  .admin-products-md .sections,
+  .admin-products-md .info-md {
+    -ms-grid-columns: 3% 22% 12% 29% 7% 12%;
+        grid-template-columns: 3% 22% 12% 29% 7% 12%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  .admin-products-md .sections {
+    margin-bottom: 20px;
+  }
+  .admin-products-md .info__edit-del {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
 }
 
 .footer-wrapper {

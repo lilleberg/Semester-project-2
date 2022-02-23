@@ -3,7 +3,7 @@ import { baseUrl } from "./settings/api.js";
 
 createMenu();
 
-const containerMd = document.querySelector(".admin-products-md");
+const containerMd = document.querySelector(".md-container");
 const containerSm = document.querySelector(".admin-products-sm");
 const url = baseUrl + "/products";
 
@@ -20,46 +20,51 @@ const url = baseUrl + "/products";
 
 function createHTML(products) {
   containerMd.innerHTML = "";
-  // containerSm.innerHTML = "";
+  containerSm.innerHTML = "";
 
   products.forEach((prod) => {
+    containerSm.innerHTML += `
+      <div class="info-sm info d-grid">
+        <div class="info__section">
+          <p class="sections__part">Id</p>
+          <p class="info__id info-sm__elem">${prod.id}</p>
+        </div>
+        <div class="info__section">
+          <div class="sections__part"></div>
+          <img src="${baseUrl}${prod.image.url}" alt="${prod.image.alternativeText}" class="info-sm__img info-sm__elem info__img">
+        </div>
+        <div class="info__section">
+          <p class="sections__part">Title</p>
+          <p class="info__title info-sm__elem">${prod.title}</p>
+        </div>
+        <div class="info__section">
+          <p class="sections__part">Description</p>
+          <p class="info__desc info-sm__elem">${prod.description}</p>
+        </div>
+        <div class="info__section">
+          <p class="sections__part">Price</p>
+          <p class="info__price info-sm__elem">${prod.price}</p>
+        </div>
+        <div class="info__edit-del">
+          <a href="edit.html"><i class="fa-solid fa-pen"></i></a>
+          <button id="delete"><i class="fa-solid fa-trash-can"></i></button>
+        </div>
+      </div>
+      
+    `;
+
     containerMd.innerHTML += `
-      <div class="info d-grid">
+      <div class="info-md info d-grid">
         <p class="info__id">${prod.id}</p>
         <img src="${baseUrl}${prod.image.url}" alt="${prod.image.alternativeText}" class="info__img">
         <p class="info__title">${prod.title}</p>
         <p class="info__desc">${prod.description}</p>
         <p class="info__price">${prod.price}</p>
         <div class="info__edit-del">
-          <i class="fa-solid fa-pen"></i>
+          <a href="edit.html"><i class="fa-solid fa-pen"></i></a>
           <i class="fa-solid fa-trash-can"></i>
         </div>
       </div>
     `;
-
-    /*containerSm.innerHTML += `
-      <div class="info info-sm d-md-none">
-        <div class="info-sm__sections">
-          <p class="sections__part">Id</p>
-          <p class="info-sm__id info-sm__elem">${prod.id}</p>
-        </div>
-        <div class="info-sm__sections">
-          <div class="sections__part"></div>
-          <img src="${baseUrl}${prod.image.url}" alt="${prod.image.alternativeText}" class="info-sm__img info-sm__elem info__img">
-        </div>
-        <div class="info-sm__sections">
-          <p class="sections__part">Title</p>
-          <p class="info-sm__title info-sm__elem">${prod.title}</p>
-        </div>
-        <div class="info-sm__sections">
-          <p class="sections__part">Description</p>
-          <p class="info-sm__desc info-sm__elem">${prod.description}</p>
-        </div>
-        <div class="info-sm__sections">
-          <p class="sections__part">Price</p>
-          <p class="info-sm__price info-sm__elem">${prod.price}</p>
-        </div>
-      </div>
-    `; */
   });
 }
