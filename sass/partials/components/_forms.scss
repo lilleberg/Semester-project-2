@@ -2,14 +2,13 @@
 .login-form,
 .add-form {
   margin: 0 auto;
-  max-width: 350px;
+  max-width: 320px;
 }
 
 .footer input,
-.main input,
+.main input:not(.file-upload__input),
 .input-group input,
-textarea,
-.custom-file {
+textarea {
   border: $border !important;
   border-radius: $border-radius;
   height: auto;

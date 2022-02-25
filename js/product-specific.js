@@ -1,5 +1,6 @@
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
+import otherProds from "./ui/otherProds.js";
 
 createMenu();
 
@@ -57,3 +58,5 @@ function createHTML(prod) {
     </div>
   `;
 }
+
+otherProds();

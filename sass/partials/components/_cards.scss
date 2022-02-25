@@ -34,6 +34,26 @@
   }
 }
 
+.other-prods {
+  gap: 50px;
+  overflow: auto;
+
+  &__product {
+    width: 220px;
+  }
+
+  &__img {
+    border-radius: 0;
+    width: 210px;
+    height: 230px;
+    object-fit: cover;
+  }
+
+  &__body {
+    padding-bottom: 5px;
+  }
+}
+
 @media only screen and (min-width: 420px) {
   .products {
     grid-template-columns: repeat(2, 1fr);

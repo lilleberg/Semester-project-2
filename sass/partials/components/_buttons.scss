@@ -28,3 +28,9 @@
 .input-group button {
   border: $border;
 }
+
+#cancel {
+  border: 3px solid $color-secondary;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+}

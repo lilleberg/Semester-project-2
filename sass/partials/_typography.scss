@@ -20,7 +20,8 @@ label {
 
 h1,
 h2,
-h3 {
+h3,
+.prod-title {
   font-family: "Merriweather", "Open Sans", "Segoe UI", Verdana;
   padding: 0;
 }
@@ -50,7 +51,8 @@ h1 {
   padding: 0 0 50px 0;
 }
 
-h2 {
+h2,
+.prod-title {
   font-size: 1.4rem;
 }
 
@@ -63,11 +65,16 @@ h3 {
     font-size: 2.2rem;
   }
 
-  h2 {
+  h2,
+  .prod-title {
     font-size: 1.5rem;
   }
 
   h3 {
     font-size: 1.2rem;
   }
+}
+
+.no-results p {
+  font-size: 1.2rem;
 }

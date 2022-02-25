@@ -11,8 +11,8 @@ export default function renderProducts(prods) {
         <a href="product_specific.html?id=${prod.id}">
           <div class="card">
             <img src="${baseUrl}${prod.image.url}" class="card-img-top card__img" alt="${prod.image.alternativeText}">
-            <div class="card-body card__body d-grid">
-              <h2 class="card-title card__title">${prod.title}</h2>
+            <div class="card-body card__body">
+              <p class="card-title prod-title card__title">${prod.title}</p>
               <p class="card__price">$ ${prod.price}</p>
             </div>
           </div>
