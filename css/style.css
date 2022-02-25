@@ -508,11 +508,34 @@ textarea {
 
 .prod-specific__price {
   font-size: 1.2rem;
+  margin: 20px 0;
 }
 
 .prod-specific__size {
   max-width: 200px;
   margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 899px) {
+  .prod-specific__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .prod-specific {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .prod-specific__price {
+    margin-top: 0;
+  }
 }
 
 .discount {
