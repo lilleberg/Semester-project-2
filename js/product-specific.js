@@ -53,7 +53,7 @@ function createHTML(prod) {
       </div>
 
       <div class="prod-specific__btn">
-        <button class="btn btn-blue" id="buy">Add to cart</button>
+        <button class="btn btn-blue" id="buy" data-product="${prod.id}">Add to cart</button>
       </div>
     </div>
   `;

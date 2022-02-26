@@ -103,19 +103,19 @@
 
           <div class="bg-light-grey cart">
             <div class="container">
-              <div class="prod-info">
-                <div class="prod-info__product">
-                  <p>Product</p>
+              <div class="cart">
+                <div class="cart__info">
+                  <div class="cart__info-title">
+                    <p>Product</p>
+                  </div>
+                  <div class="cart__info-price">
+                    <p>Price</p>
+                  </div>
                 </div>
-                <div class="prod-info__quantity">
-                  <p>Quantity</p>
-                </div>
-                <div class="prod-info__price">
-                  <p>Price</p>
-                </div>
+                <div class="cart__items"></div>
               </div>
 
-              <div class="prod-info__empty-basket">
+              <div class="cart__empty-basket">
                 <p>Empty basket</p>
               </div>
 
@@ -140,11 +140,14 @@
                   <div class="form-error"></div>
                 </div>
                 <div class="cost">
-                  <div class="cost__delivery">
+                  <div class="cost__items">
                     <p>Delivery cost</p>
                     <p>Subtotal</p>
                   </div>
-                  <div class="cost__total"></div>
+                  <div class="cost__total">
+                    <p class="cost__delivery">$ 3</p>
+                    <p class="cost__subtotal"></p>
+                  </div>
                 </div>
               </div>
 
