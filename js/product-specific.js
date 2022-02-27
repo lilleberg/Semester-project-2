@@ -1,8 +1,10 @@
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import otherProds from "./ui/otherProds.js";
+import addProducts from "./cart.js";
 
 createMenu();
+otherProds();
 
 const params = new URLSearchParams(document.location.search);
 const id = params.get("id");
@@ -18,8 +20,6 @@ const container = document.querySelector(".prod-specific");
   try {
     const response = await fetch(url);
     const prod = await response.json();
-
-    console.log(prod);
 
     document.querySelector("title").innerHTML = `Shoes Up | ${prod.title}`;
     document.querySelector("h1").innerHTML = `${prod.title}`;
@@ -53,10 +53,14 @@ function createHTML(prod) {
       </div>
 
       <div class="prod-specific__btn">
-        <button class="btn btn-blue" id="buy" data-product="${prod.id}">Add to cart</button>
+        <button class="btn btn-blue" id="buy" data-id="${prod.id}">Add to cart</button>
       </div>
     </div>
   `;
-}
 
-otherProds();
+  const buyBtn = document.querySelectorAll("#buy");
+  buyBtn.forEach((btn) => {
+    btn.addEventListener("click", addProducts);
+    console.log("Click");
+  });
+}

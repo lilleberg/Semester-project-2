@@ -1,27 +1,24 @@
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
-import { getCart } from "./utils/storage.js";
+import { addToCart, getCart } from "./utils/storage.js";
 
 createMenu();
 
-const container = document.querySelector(".cart__items");
-const subtotal = document.querySelector(".cost-subtotal");
+export default function addProducts() {
+  const id = this.dataset.id;
+  const cart = getCart();
 
-const cart = getCart();
-let total = 0;
-let price = 0;
+  const product = cart.find((prod) => prod.id === parseInt(id));
+  console.log("product", product);
 
-function addProducts() {
-  if (cart.length) {
-    cart.forEach((prod) => {
-      price = parseFloat(prod.price);
-      total += price;
+  /*   cart.push(product);
+  addToCart(cart); */
 
-      createHTML(prod);
-      subtotal.innerHTML = `${total}`;
-    });
-  }
+  console.log("cart", cart);
 }
+
+/*
+const container = document.querySelector(".cart__items");
 
 function createHTML(prod) {
   container.innerHTML += `
@@ -33,4 +30,8 @@ function createHTML(prod) {
       <p class="cart__price">${prod.price}</p>
     </div>
   `;
-}
+} */
+
+/* const subtotal = document.querySelector(".cost-subtotal");
+let total = 0;
+let price = 0; */
