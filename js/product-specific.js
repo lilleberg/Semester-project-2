@@ -2,7 +2,7 @@ import { cartAmount } from "./ui/cartAmount.js";
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import otherProds from "./ui/otherProds.js";
-import { addToCart, getCart } from "./utils/storage.js";
+import addProdToCart from "./ui/addToCart.js";
 
 createMenu();
 otherProds();
@@ -30,13 +30,7 @@ const container = document.querySelector(".prod-specific");
     const buyBtn = document.querySelectorAll("#buy");
 
     buyBtn.forEach((btn) => {
-      btn.onclick = function () {
-        const cart = getCart();
-
-        cart.push(prod);
-        addToCart(cart);
-        cartAmount();
-      };
+      btn.addEventListener("click", addProdToCart(prod, btn));
     });
   } catch (error) {
     console.log(error);

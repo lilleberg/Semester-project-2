@@ -44,11 +44,6 @@ const emptyBtn = document.querySelector(".empty");
 emptyBtn.onclick = function () {
   clearCart();
 
-  location.href = "cart.html";
-
-  const cart = getCart();
-  createHTML(cart);
-
   displayMessage(
     "normal-message",
     "No products added to cart.",

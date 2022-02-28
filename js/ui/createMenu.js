@@ -32,7 +32,7 @@ export default function createMenu() {
     </li>
   `;
 
-    loginIcon.innerHTML = `<button id="logout">Log out</button>`;
+    loginIcon.innerHTML = `<button class="nav-link" id="logout">Log out</button>`;
     logoutButton();
   }
 

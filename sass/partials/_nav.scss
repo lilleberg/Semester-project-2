@@ -25,7 +25,8 @@
 
   &__sm {
     grid-template-columns: 1fr auto 1fr;
-    flex: 1;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__hamb-btn {
@@ -35,6 +36,11 @@
 
   i {
     font-size: 1.5rem;
+  }
+
+  .bag-icon {
+    justify-self: start;
+    width: fit-content;
   }
 
   &__link,
@@ -63,7 +69,7 @@
     }
   }
 
-  @media only screen and (min-width: 991px) {
+  @media only screen and (min-width: 992px) {
     &__collapse {
       display: grid;
       grid-template-columns: 1fr auto 1fr;

@@ -33,23 +33,36 @@
       <header>
         <div class="header-wrapper shadow">
           <nav class="navbar navbar-expand-lg px-lg-4 nav">
-            <div class="nav__sm d-grid d-lg-none">
-              <div class="placement-helper"></div>
-              <a class="navbar-brand d-lg-none m-0 nav__logo" href="index.html"
-                ><img src="images/Logo.png" alt="Logo for Shoes Up"
-              /></a>
+            <div class="d-lg-none w-100">
+              <div class="nav__sm d-grid">
+                <div class="cart-bag-sm d-lg-none w-100">
+                  <a class="nav-link bag-icon" href="cart.html"
+                    ><i
+                      class="fas fa-shopping-bag"
+                      aria-label="Shopping bag"
+                    ></i
+                    ><span class="amount-cart"></span
+                  ></a>
+                </div>
 
-              <button
-                class="navbar-toggler nav__hamb-btn"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <i class="fas fa-bars"></i>
-              </button>
+                <a
+                  class="navbar-brand d-lg-none m-0 nav__logo"
+                  href="index.html"
+                  ><img src="images/Logo.png" alt="Logo for Shoes Up"
+                /></a>
+
+                <button
+                  class="navbar-toggler nav__hamb-btn"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
             </div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -81,7 +94,7 @@
                       >Products</a
                     >
                   </li>
-                  <li class="nav-item nav__item mx-lg-3">
+                  <li class="nav-item nav__item mx-lg-3 d-none d-lg-block">
                     <a class="nav-link nav__link bag-icon" href="cart.html"
                       ><i
                         class="fas fa-shopping-bag"
