@@ -1,7 +1,10 @@
 import createMenu from "./ui/createMenu.js";
 import { baseUrl } from "./settings/api.js";
+import { cartAmount } from "./ui/cartAmount.js";
+import deleteProduct from "./ui/deleteProduct.js";
 
 createMenu();
+cartAmount();
 
 const containerMd = document.querySelector(".md-container");
 const containerSm = document.querySelector(".admin-products-sm");
@@ -47,7 +50,7 @@ function createHTML(products) {
         </div>
         <div class="info__edit-del">
           <a href="edit.html"><i class="fa-solid fa-pen"></i></a>
-          <button id="delete"><i class="fa-solid fa-trash-can"></i></button>
+          <button id="delete" data-delete="${prod.id}"><i class="fa-solid fa-trash-can"></i></button>
         </div>
       </div>
       
@@ -62,9 +65,14 @@ function createHTML(products) {
         <p class="info__price">${prod.price}</p>
         <div class="info__edit-del">
           <a href="edit_product.html"><i class="fa-solid fa-pen"></i></a>
-          <i class="fa-solid fa-trash-can"></i>
+          <button id="delete" data-delete="${prod.id}"><i class="fa-solid fa-trash-can"></i></button>
         </div>
       </div>
     `;
+
+    const deleteBtns = document.querySelectorAll("#delete");
+    deleteBtns.forEach((btn) => {
+      btn.addEventListener("click", deleteProduct);
+    });
   });
 }

@@ -25,6 +25,62 @@ i {
   cursor: pointer;
 }
 
+/*loader*/
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  border: 10px solid #faf00d;
+  border-radius: 50%;
+  border-top: 12px solid #75dff1;
+  border-bottom: 12px solid #75dff1;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*amount in cart*/
+.bag-icon {
+  position: relative;
+}
+
+.amount-cart {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  color: #f0f0f0;
+  background-color: #1c1c1c;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 0.8rem;
+}
+
 a,
 p,
 h1,
@@ -35,6 +91,7 @@ button,
 .input-group input,
 .input-group button,
 label,
+span,
 .btn a,
 .jumbotron a {
   color: #1c1c1c;
@@ -55,7 +112,8 @@ h3,
 
 p,
 .nav__link,
-label {
+label,
+span {
   font-family: "Open Sans", "Segoe UI", Verdana;
   font-size: 1rem;
 }
@@ -66,6 +124,7 @@ button:not(.nav__hamb-btn) {
 }
 
 a,
+a:hover,
 .jumbotron a,
 .btn a,
 .products a {
@@ -573,7 +632,7 @@ textarea {
 
 .discount {
   max-width: 220px;
-  /* Why didn't this button work like the others? */
+  /* Why doesn't this button work like the others?*/
 }
 
 .discount__btn {
@@ -664,6 +723,7 @@ textarea {
 
 .admin-products .info__edit-del #delete {
   border: none;
+  padding: 0;
 }
 
 .admin-products .info__edit-del #delete i {
@@ -711,6 +771,9 @@ textarea {
         grid-template-columns: 1fr 1fr;
     gap: 10px;
     justify-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 

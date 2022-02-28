@@ -102,8 +102,8 @@
         <section class="main-wrapper main">
           <h1 class="text-center">Shopping cart</h1>
 
-          <div class="bg-light-grey cart">
-            <div class="container">
+          <div class="bg-light-grey">
+            <div class="container cart-container">
               <div class="cart">
                 <div class="cart__info">
                   <div class="cart__info-title">
@@ -113,11 +113,11 @@
                     <p>Price</p>
                   </div>
                 </div>
-                <div class="cart__items"></div>
+                <div class="cart__items"><!-- JS --></div>
               </div>
 
               <div class="cart__empty-basket">
-                <p>Empty basket</p>
+                <button class="empty">Empty basket</button>
               </div>
 
               <div>
@@ -147,7 +147,7 @@
                   </div>
                   <div class="cost__total">
                     <p class="cost__delivery">$ 3</p>
-                    <p class="cost__subtotal"></p>
+                    <p class="cost__subtotal">$ 0</p>
                   </div>
                 </div>
               </div>
@@ -160,6 +160,9 @@
                   <a href="#">Checkout</a>
                 </button>
               </div>
+            </div>
+            <div class="container">
+              <div class="message-container"></div>
             </div>
           </div>
         </section>

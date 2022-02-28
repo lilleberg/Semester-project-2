@@ -1,17 +1,17 @@
+import { cartAmount } from "./ui/cartAmount.js";
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import otherProds from "./ui/otherProds.js";
-import addProducts from "./cart.js";
+import { addToCart, getCart } from "./utils/storage.js";
 
 createMenu();
 otherProds();
+cartAmount();
 
 const params = new URLSearchParams(document.location.search);
 const id = params.get("id");
 
-if (!id) {
-  location.href = "index.html";
-}
+if (!id) location.href = "index.html";
 
 const url = baseUrl + `/products/${id}`;
 const container = document.querySelector(".prod-specific");
@@ -23,9 +23,21 @@ const container = document.querySelector(".prod-specific");
 
     document.querySelector("title").innerHTML = `Shoes Up | ${prod.title}`;
     document.querySelector("h1").innerHTML = `${prod.title}`;
-    container.innerHTML = "";
 
+    container.innerHTML = "";
     createHTML(prod);
+
+    const buyBtn = document.querySelectorAll("#buy");
+
+    buyBtn.forEach((btn) => {
+      btn.onclick = function () {
+        const cart = getCart();
+
+        cart.push(prod);
+        addToCart(cart);
+        cartAmount();
+      };
+    });
   } catch (error) {
     console.log(error);
   }
@@ -57,10 +69,4 @@ function createHTML(prod) {
       </div>
     </div>
   `;
-
-  const buyBtn = document.querySelectorAll("#buy");
-  buyBtn.forEach((btn) => {
-    btn.addEventListener("click", addProducts);
-    console.log("Click");
-  });
 }

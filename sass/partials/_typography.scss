@@ -8,6 +8,7 @@ button,
 .input-group input,
 .input-group button,
 label,
+span,
 .btn a,
 .jumbotron a {
   color: $color-black;
@@ -28,7 +29,8 @@ h3,
 
 p,
 .nav__link,
-label {
+label,
+span {
   font-family: "Open Sans", "Segoe UI", Verdana;
   font-size: 1rem;
 }
@@ -39,6 +41,7 @@ button:not(.nav__hamb-btn) {
 }
 
 a,
+a:hover,
 .jumbotron a,
 .btn a,
 .products a {

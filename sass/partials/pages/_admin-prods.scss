@@ -42,6 +42,7 @@
 
       #delete {
         border: none;
+        padding: 0;
 
         i {
           padding: 8px 9px;
@@ -86,6 +87,7 @@
         grid-template-columns: 1fr 1fr;
         gap: 10px;
         justify-items: center;
+        align-items: start;
       }
     }
   }

@@ -1,8 +1,10 @@
 import createMenu from "./ui/createMenu.js";
 import { baseUrl } from "./settings/api.js";
 import { saveToken, saveUser } from "./utils/storage.js";
+import { cartAmount } from "./ui/cartAmount.js";
 
 createMenu();
+cartAmount();
 
 const form = document.querySelector(".login-form");
 const username = document.querySelector("#username");

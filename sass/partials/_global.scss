@@ -38,3 +38,42 @@ img {
 i {
   cursor: pointer;
 }
+
+/*loader*/
+.loader {
+  display: flex;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  border: 10px solid $color-primary;
+  border-radius: 50%;
+  border-top: 12px solid $color-secondary;
+  border-bottom: 12px solid $color-secondary;
+  grid-column: 2;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*amount in cart*/
+.bag-icon {
+  position: relative;
+}
+
+.amount-cart {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  color: $color-white;
+  background-color: $color-black;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 0.8rem;
+}

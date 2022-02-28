@@ -2,8 +2,10 @@ import createMenu from "./ui/createMenu.js";
 import { baseUrl } from "./settings/api.js";
 import renderProducts from "./ui/renderProducts.js";
 import filterSearch from "./ui/filterSearch.js";
+import { cartAmount } from "./ui/cartAmount.js";
 
 createMenu();
+cartAmount();
 
 const url = baseUrl + "/products";
 
