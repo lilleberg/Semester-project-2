@@ -30,7 +30,17 @@
 }
 
 #cancel {
-  border: 3px solid $color-secondary;
+  border: $thick-border-blue;
   border-radius: $border-radius;
   box-shadow: $shadow;
+
+  &:hover {
+  }
+}
+
+.form-btns {
+  & > * {
+    width: 80px;
+    height: 42px;
+  }
 }

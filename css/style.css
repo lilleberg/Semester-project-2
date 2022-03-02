@@ -344,6 +344,11 @@ main {
           box-shadow: 3px 3px 5px #8f8f8f;
 }
 
+.form-btns > * {
+  width: 80px;
+  height: 42px;
+}
+
 /*login form*/
 .login-form,
 .add-form {
