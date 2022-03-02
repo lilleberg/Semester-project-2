@@ -2,7 +2,7 @@ import { cartAmount } from "./ui/cartAmount.js";
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import otherProds from "./ui/otherProds.js";
-import addProdToCart from "./ui/addToCart.js";
+import { getCart, addToCart } from "./utils/storage.js";
 
 createMenu();
 otherProds();
@@ -15,7 +15,6 @@ if (!id) location.href = "index.html";
 
 const url = baseUrl + `/products/${id}`;
 const container = document.querySelector(".prod-specific");
-
 (async function () {
   try {
     const response = await fetch(url);
@@ -25,17 +24,36 @@ const container = document.querySelector(".prod-specific");
     document.querySelector("h1").innerHTML = `${prod.title}`;
 
     container.innerHTML = "";
+
     createHTML(prod);
-
-    const buyBtn = document.querySelectorAll("#buy");
-
-    buyBtn.forEach((btn) => {
-      btn.addEventListener("click", addProdToCart(prod, btn));
-    });
+    addProdToCart(prod);
   } catch (error) {
     console.log(error);
   }
 })();
+
+function addProdToCart(prod) {
+  const buyBtn = document.querySelectorAll("#buy");
+  /*  let id = prod.id;
+  let counter = 1; */
+
+  buyBtn.forEach((btn) => {
+    btn.onclick = function () {
+      const quantity = 0;
+      Object.assign(quantity);
+      const cart = getCart();
+
+      /* counter++;
+      //const counter = cart.filter((obj) => obj.id === id).length;
+      prod.quantity = counter; */
+
+      cart.push(prod);
+      addToCart(cart);
+
+      cartAmount();
+    };
+  });
+}
 
 function createHTML(prod) {
   container.innerHTML = `

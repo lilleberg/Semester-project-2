@@ -8,7 +8,7 @@ cartAmount();
 
 const containerMd = document.querySelector(".md-container");
 const containerSm = document.querySelector(".admin-products-sm");
-const url = baseUrl + "/gproducts";
+const url = baseUrl + "/products";
 
 (async function () {
   try {
@@ -46,7 +46,7 @@ function createHTML(products) {
         </div>
         <div class="info__section">
           <p class="sections__part">Price</p>
-          <p class="info__price info-sm__elem">${prod.price}</p>
+          <p class="info__price info-sm__elem">$${prod.price}</p>
         </div>
         <div class="info__edit-del">
           <a href="edit_product.html"><i class="fa-solid fa-pen"></i></a>
@@ -62,7 +62,7 @@ function createHTML(products) {
         <img src="${baseUrl}${prod.image.url}" alt="${prod.image.alternativeText}" class="info__img">
         <p class="info__title">${prod.title}</p>
         <p class="info__desc">${prod.description}</p>
-        <p class="info__price">${prod.price}</p>
+        <p class="info__price">$${prod.price}</p>
         <div class="info__edit-del">
           <a href="edit_product.html"><i class="fa-solid fa-pen"></i></a>
           <button id="delete" data-delete="${prod.id}"><i class="fa-solid fa-trash-can"></i></button>

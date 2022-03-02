@@ -13,7 +13,7 @@ export default function renderProducts(prods) {
             <img src="${baseUrl}${prod.image.url}" class="card-img-top card__img" alt="${prod.image.alternativeText}">
             <div class="card-body card__body">
               <p class="card-title prod-title card__title">${prod.title}</p>
-              <p class="card__price">$ ${prod.price}</p>
+              <p class="card__price">$${prod.price}</p>
             </div>
           </div>
         </a>

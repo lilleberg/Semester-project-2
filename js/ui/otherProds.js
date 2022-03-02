@@ -10,6 +10,8 @@ export default function otherProds() {
       const response = await fetch(url);
       const data = await response.json();
 
+      container.innerHTML = "";
+
       for (let i = 0; i < 6; i++) {
         const prod = data[i];
 
