@@ -10,7 +10,7 @@ export function cartAmount() {
   });
 
   if (cart.length === 0) {
-    document.querySelector(".amount-cart").style.display = "none";
+    amountCart.style.display = "none";
   }
 }
 

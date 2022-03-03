@@ -351,7 +351,8 @@ main {
 
 /*login form*/
 .login-form,
-.add-form {
+.add-form,
+.edit-form {
   margin: 0 auto;
   max-width: 320px;
 }
@@ -632,8 +633,8 @@ textarea {
 }
 
 .cart__info, .cart__prod {
-  -ms-grid-columns: 50% 30% 10% 10%;
-      grid-template-columns: 50% 30% 10% 10%;
+  -ms-grid-columns: 70% 20% 10%;
+      grid-template-columns: 70% 20% 10%;
 }
 
 .cart__info p,

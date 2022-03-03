@@ -13,7 +13,7 @@ const id = params.get("id");
 
 if (!id) location.href = "index.html";
 
-const url = baseUrl + `/products/${id}`;
+const url = baseUrl + "/products/" + id;
 const container = document.querySelector(".prod-specific");
 (async function () {
   try {
@@ -34,18 +34,10 @@ const container = document.querySelector(".prod-specific");
 
 function addProdToCart(prod) {
   const buyBtn = document.querySelectorAll("#buy");
-  /*  let id = prod.id;
-  let counter = 1; */
 
   buyBtn.forEach((btn) => {
     btn.onclick = function () {
-      const quantity = 0;
-      Object.assign(quantity);
       const cart = getCart();
-
-      /* counter++;
-      //const counter = cart.filter((obj) => obj.id === id).length;
-      prod.quantity = counter; */
 
       cart.push(prod);
       addToCart(cart);

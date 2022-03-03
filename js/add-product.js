@@ -17,9 +17,10 @@ const description = document.querySelector("#description");
 const image = document.querySelector("#uploadFile");
 const checkbox = document.querySelector("#checkbox");
 const message = document.querySelector(".message-container");
+let featured = false;
 
-form.onsubmit = function (event) {
-  event.preventDefault();
+form.onsubmit = function (e) {
+  e.preventDefault();
 
   message.innerHTML = "";
   const titleVal = title.value.trim();
@@ -40,6 +41,7 @@ form.onsubmit = function (event) {
     );
   }
   addProduct(titleVal, priceVal, descriptionVal, imageVal, featured);
+  document.querySelector("#cancel").innerHTML = "Back";
   form.reset();
 };
 const url = baseUrl + "/products";
@@ -78,8 +80,6 @@ async function addProduct(title, price, desc, img, featured) {
     console.log(error);
   }
 }
-
-let featured = false;
 
 function isChecked() {
   if (this.checked) {

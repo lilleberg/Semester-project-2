@@ -26,16 +26,7 @@ function viewProducts() {
 
   const cart = getCart();
 
-  /*
-   */
-  /*   const prod = cart.find((item) => item.id === id);
-  console.log("prod", prod);
-
-  if (!prod) {
-    cart.push(prod);
-    addToCart(cart);
-  } */
-  let id = 0;
+  //let id = 0;
   let total = 0.0;
   let price = 0;
   let sum = 0;
@@ -46,20 +37,10 @@ function viewProducts() {
     sum += price;
     total = sum + delivery;
 
-    let counter = 0;
-    id = prod.id;
-    const prodNum = cart.filter((item) => item.id === id).length;
-
-    counter = prodNum;
-    console.log("prod amount", prodNum);
-
     sumContainer.innerHTML = `$ ${sum.toFixed(2)}`;
     totalContainer.innerHTML = `$ ${total.toFixed(2)}`;
-    createHTML(prod, counter);
+    createHTML(prod);
   });
-
-  const newCart = cart.filter((item) => item.id !== id);
-  console.log(newCart);
 }
 
 viewProducts();
@@ -78,14 +59,16 @@ emptyBtn.onclick = function () {
   );
 };
 
-function createHTML(prod, quantity) {
+const removeProdBtn = document.querySelector(".remove-prod");
+removeProdBtn.onclick = function () {};
+
+function createHTML(prod) {
   container.innerHTML += `
-    <div class="cart__prod d-grid">
-      <div class="d-flex">
+    <div class="cart__prod d-grid mb-4">
+      <a href="product_specific.html?id=${prod.id}" class="d-flex">
         <img src="${baseUrl}${prod.image.formats.small.url}" class="cart__img" alt="${prod.image.alternativeText}" />
-        <p class="cart__title">${prod.title}</p>
-      </div>
-      <p class="quantity">${quantity}</p>
+        <p class="cart__title ml-4">${prod.title}</p>
+      </a>
       <p class="cart__price">$ ${prod.price}</p>
       <i class="fa-solid fa-xmark remove-prod"><span class="sr-only">Remove product</span></i>
     </div>

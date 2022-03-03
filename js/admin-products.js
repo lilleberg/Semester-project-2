@@ -64,7 +64,7 @@ function createHTML(products) {
         <p class="info__desc">${prod.description}</p>
         <p class="info__price">$${prod.price}</p>
         <div class="info__edit-del">
-          <a href="edit_product.html"><i class="fa-solid fa-pen"></i></a>
+          <a href="edit_product.html?id=${prod.id}"><i class="fa-solid fa-pen"></i></a>
           <button id="delete" data-delete="${prod.id}"><i class="fa-solid fa-trash-can"></i></button>
         </div>
       </div>

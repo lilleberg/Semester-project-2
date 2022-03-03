@@ -1,7 +1,7 @@
 import { baseUrl } from "../settings/api.js";
 import { getToken } from "../utils/storage.js";
 
-export default async function deleteProduct(event) {
+export default async function deleteProduct() {
   const id = this.dataset.delete;
   const deleteProduct = confirm(
     "Are you sure you want to delete this product?"
