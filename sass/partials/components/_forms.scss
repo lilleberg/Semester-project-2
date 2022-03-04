@@ -7,20 +7,15 @@
 }
 
 .footer input,
-.main input:not(.file-upload__input),
+.main input:not(.file-upload__input-file),
 .input-group input,
-textarea {
-  border: $border !important;
+#description {
   border-radius: $border-radius;
   height: auto;
-  border-right: none;
+  border: none;
+  box-shadow: $shadow;
 
   &:focus {
     box-shadow: 1px 0 5px lighten($color-black, 50%);
   }
-}
-
-.form-group input,
-textarea {
-  box-shadow: $shadow;
 }

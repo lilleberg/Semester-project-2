@@ -54,7 +54,7 @@ function createHTML(prod) {
     </div>
     
     <div class="prod-specific__info">
-      <p class="prod-specific__price">$ ${prod.price}</p>
+      <p class="prod-specific__price">$${prod.price}</p>
       <p class="prod-specific__desc mb-4">${prod.description}</p>
 
       <div class="form-group prod-specific__size">

@@ -5,8 +5,8 @@ h2,
 h3,
 i,
 button,
-.input-group input,
-.input-group button,
+.input-group > *,
+.form-group > *,
 label,
 span,
 .btn a,
@@ -29,14 +29,14 @@ h3,
 
 p,
 .nav__link,
-label,
 span {
   font-family: "Open Sans", "Segoe UI", Verdana;
   font-size: 1rem;
 }
 
 a,
-button:not(.nav__hamb-btn) {
+button:not(.nav__hamb-btn),
+label {
   font-family: "Roboto", "Segoe UI", Verdana;
 }
 
@@ -51,7 +51,11 @@ a:hover,
 h1 {
   font-weight: 500;
   font-size: 1.8rem;
-  padding: 0 0 50px 0;
+  padding-bottom: 50px;
+
+  @media only screen and (max-width: 992px) {
+    padding: 65px 0 50px 0;
+  }
 }
 
 h2,

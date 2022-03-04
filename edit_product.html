@@ -134,32 +134,36 @@
                   <textarea
                     class="form-control"
                     id="description"
-                    rows="3"
+                    rows="6"
                   ></textarea>
                 </div>
 
                 <div class="file-upload my-4">
                   <label for="uploadFile" class="file-upload__input"
                     >Upload image
-                    <span id="fileName"></span>
                   </label>
+
+                  <div class="file-upload__current mb-3">
+                    <p>Current file:</p>
+                    <span id="fileName" class="d-block ml-2"></span>
+                  </div>
 
                   <input
                     type="file"
                     class="file-upload__input-file"
                     id="uploadFile"
-                    style="display: none"
                   />
                 </div>
 
-                <div class="checkbox-group d-flex align-items-center">
-                  <label for="checkbox">Featured</label>
+                <div class="custom-control custom-switch">
                   <input
-                    class="checkbox ml-3"
                     type="checkbox"
-                    value="Featured"
+                    class="custom-control-input"
                     id="checkbox"
                   />
+                  <label class="custom-control-label" for="checkbox"
+                    >Featured</label
+                  >
                 </div>
 
                 <input id="id" type="hidden" />
@@ -167,9 +171,9 @@
                 <div
                   class="form-btns d-flex align-items-center justify-content-around"
                 >
-                  <a href="admin_products.html" id="cancel" class="btn"
-                    >Cancel</a
-                  >
+                  <button type="button" class="btn btn-white mt-4">
+                    <a href="admin_products.html" id="cancel">Cancel</a>
+                  </button>
                   <button type="submit" class="btn btn-blue my-4">
                     Update
                   </button>

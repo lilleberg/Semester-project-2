@@ -25,7 +25,6 @@ const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loader = document.querySelector(".spinner-grow");
 let featured = false;
-let file = "";
 const url = baseUrl + "/products/" + id;
 
 (async function () {
@@ -33,7 +32,6 @@ const url = baseUrl + "/products/" + id;
     const response = await fetch(url);
     const json = await response.json();
 
-    file = json.image.name;
     title.value = json.title;
     price.value = json.price;
     description.value = json.description;
@@ -88,6 +86,7 @@ async function updateProduct(title, price, desc, img, id, featured) {
 
   if (img) {
     formData.append("files.image", img, img.name);
+    fileName.innerHTML = img.name;
   }
   formData.append("data", JSON.stringify(data));
 

@@ -9,9 +9,9 @@ export function cartAmount() {
     elem.innerHTML = `${cartCounter}`;
   });
 
-  if (cart.length === 0) {
+  /* if (cartCounter === 0) {
     amountCart.style.display = "none";
-  }
+  } */
 }
 
 cartAmount();

@@ -87,7 +87,6 @@ function isChecked() {
   } else {
     featured = false;
   }
-  console.log(featured);
 }
 
 checkbox.addEventListener("click", isChecked);

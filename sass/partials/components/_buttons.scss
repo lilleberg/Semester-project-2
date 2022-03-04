@@ -1,40 +1,34 @@
 .btn-yw {
-  background-image: $btn-yw;
+  background-color: $color-primary;
   color: $color-black;
   box-shadow: $shadow;
   border-radius: $border-radius;
-  outline: none;
 
   &:hover {
     background-color: $btn-yw-hover;
     background-image: none;
-    box-shadow: $shadow-hover;
   }
 }
 
 .btn-blue {
-  background-image: $btn-blue;
+  background: $color-secondary;
   color: $color-black;
   box-shadow: $shadow;
-  outline: none;
 
   &:hover {
     background-color: $btn-blue-hover;
-    background-image: none;
-    box-shadow: $shadow-hover;
   }
 }
 
-.input-group button {
-  border: $border;
-}
-
-#cancel {
+.btn-white {
   border: $thick-border-blue;
   border-radius: $border-radius;
   box-shadow: $shadow;
+  padding: 4px 12px;
 
   &:hover {
+    background-color: $btn-blue-hover;
+    border-color: $btn-blue-hover;
   }
 }
 

@@ -1,21 +1,11 @@
-#checkbox {
-  appearance: none;
-  background-color: #fff;
-  color: $color-black;
-  padding: 9px;
-  border-radius: $border-radius;
-  display: inline-block;
-  position: relative;
+.custom-control-input ~ .custom-control-label,
+.custom-control-input:checked ~ .custom-control-label::before {
+  box-shadow: none !important;
 }
 
-#checkbox:checked::after {
-  font: var(--fa-font-solid);
-  content: "\f00c";
-  font-size: 1rem;
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  color: $color-black;
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: $color-secondary;
+  background-color: $color-secondary;
 }
 
 .add-form,
@@ -27,4 +17,12 @@
   #price {
     max-width: 100px;
   }
+}
+
+form label {
+  font-size: 1.1rem;
+}
+
+#fileName {
+  font-style: italic;
 }

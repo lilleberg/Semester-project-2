@@ -28,7 +28,7 @@ form.onsubmit = function (event) {
 };
 
 async function loginUser(username, password) {
-  const url = baseUrl + "auth/local";
+  const url = baseUrl + "/auth/local";
 
   const data = JSON.stringify({ identifier: username, password: password });
   console.log(data);
@@ -59,3 +59,11 @@ async function loginUser(username, password) {
     console.log(error);
   }
 }
+
+document.querySelector("form input").addEventListener("keyup", function (e) {
+  e.preventDefault();
+
+  if (e.keyCode === "Enter") {
+    document.querySelector("form button").click();
+  }
+});

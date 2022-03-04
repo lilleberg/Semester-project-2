@@ -26,7 +26,6 @@ function viewProducts() {
 
   const cart = getCart();
 
-  //let id = 0;
   let total = 0.0;
   let price = 0;
   let sum = 0;
@@ -37,8 +36,8 @@ function viewProducts() {
     sum += price;
     total = sum + delivery;
 
-    sumContainer.innerHTML = `$ ${sum.toFixed(2)}`;
-    totalContainer.innerHTML = `$ ${total.toFixed(2)}`;
+    sumContainer.innerHTML = `$${sum.toFixed(2)}`;
+    totalContainer.innerHTML = `$${total.toFixed(2)}`;
     createHTML(prod);
   });
 }
@@ -59,8 +58,20 @@ emptyBtn.onclick = function () {
   );
 };
 
-const removeProdBtn = document.querySelector(".remove-prod");
-removeProdBtn.onclick = function () {};
+const removeProdBtn = document.querySelectorAll(".remove-prod");
+
+removeProdBtn.forEach((btn) => {
+  btn.onclick = function () {
+    const cart = getCart();
+
+    let id = this.dataset.remove;
+    console.log(id);
+
+    const updatedCart = cart.filter((prod) => prod.id !== id);
+    console.log(updatedCart);
+    //addToCart(updatedCart);
+  };
+});
 
 function createHTML(prod) {
   container.innerHTML += `
@@ -69,8 +80,8 @@ function createHTML(prod) {
         <img src="${baseUrl}${prod.image.formats.small.url}" class="cart__img" alt="${prod.image.alternativeText}" />
         <p class="cart__title ml-4">${prod.title}</p>
       </a>
-      <p class="cart__price">$ ${prod.price}</p>
-      <i class="fa-solid fa-xmark remove-prod"><span class="sr-only">Remove product</span></i>
+      <p class="cart__price">$${prod.price}</p>
+      <i class="fa-solid fa-xmark remove-prod mr-2" data-remove="${prod.id}"><span class="sr-only">Remove product</span></i>
     </div>
   `;
 }
