@@ -8,10 +8,6 @@ export function cartAmount() {
   amountCart.forEach((elem) => {
     elem.innerHTML = `${cartCounter}`;
   });
-
-  /* if (cartCounter === 0) {
-    amountCart.style.display = "none";
-  } */
 }
 
 cartAmount();

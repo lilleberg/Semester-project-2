@@ -25,6 +25,7 @@ const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loader = document.querySelector(".spinner-grow");
 let featured = false;
+
 const url = baseUrl + "/products/" + id;
 
 (async function () {
@@ -60,6 +61,7 @@ form.onsubmit = function (e) {
   if (
     titleVal.length === 0 ||
     priceVal.length === 0 ||
+    typeof priceVal !== "number" ||
     descriptionVal.length === 0
   ) {
     displayMessage(
@@ -69,6 +71,7 @@ form.onsubmit = function (e) {
     );
   }
   updateProduct(titleVal, priceVal, descriptionVal, imageVal, idVal, featured);
+  window.scrollTo(0, 100);
   document.querySelector("#cancel").innerHTML = `Back`;
 };
 

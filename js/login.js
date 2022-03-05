@@ -2,6 +2,7 @@ import createMenu from "./ui/createMenu.js";
 import { baseUrl } from "./settings/api.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 import { cartAmount } from "./ui/cartAmount.js";
+import displayMessage from "./ui/displayMessage.js";
 
 createMenu();
 cartAmount();
@@ -9,29 +10,25 @@ cartAmount();
 const form = document.querySelector(".login-form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
-const message = document.querySelector(".message-container");
 
 form.onsubmit = function (event) {
   event.preventDefault();
-
-  //message.innerHTML = "";
 
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
   if (usernameValue.length === 0 || passwordValue.length === 0) {
-    /*return displayMessage("error", "Please enter proper values", ".message-container");*/
-    console.log("Invalid");
+    displayMessage("error", "Please enter proper values", ".message-container");
+  } else {
+    loginUser(usernameValue, passwordValue);
   }
-
-  loginUser(usernameValue, passwordValue);
 };
 
 async function loginUser(username, password) {
   const url = baseUrl + "/auth/local";
 
   const data = JSON.stringify({ identifier: username, password: password });
-  console.log(data);
+
   const options = {
     method: "POST",
     body: data,
@@ -52,8 +49,12 @@ async function loginUser(username, password) {
     }
 
     if (json.error) {
-      //displayMessage();
-      console.log("error with login");
+      displayMessage(
+        "error",
+        "Username and/or password is incorrect",
+        ".message-container"
+      );
+      console.log("Error with login");
     }
   } catch (error) {
     console.log(error);

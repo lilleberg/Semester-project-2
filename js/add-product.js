@@ -17,6 +17,7 @@ const description = document.querySelector("#description");
 const image = document.querySelector("#uploadFile");
 const checkbox = document.querySelector("#checkbox");
 const message = document.querySelector(".message-container");
+
 let featured = false;
 
 form.onsubmit = function (e) {
@@ -24,15 +25,15 @@ form.onsubmit = function (e) {
 
   message.innerHTML = "";
   const titleVal = title.value.trim();
-  const priceVal = parseFloat(price.value.trim());
+  const priceVal = price.value.trim();
   const descriptionVal = description.value.trim();
   const imageVal = image.files[0];
 
   if (
     titleVal.length === 0 ||
-    priceVal.length === 0 ||
+    checkPrice(priceVal) ||
     descriptionVal.length === 0 ||
-    imageVal.length === 0
+    !imageVal
   ) {
     displayMessage(
       "warning",
@@ -40,10 +41,13 @@ form.onsubmit = function (e) {
       ".message-container"
     );
   }
+
   addProduct(titleVal, priceVal, descriptionVal, imageVal, featured);
+  window.scrollTo(0, 100);
   document.querySelector("#cancel").innerHTML = "Back";
   form.reset();
 };
+
 const url = baseUrl + "/products";
 
 async function addProduct(title, price, desc, img, featured) {
@@ -71,8 +75,9 @@ async function addProduct(title, price, desc, img, featured) {
     const response = await fetch(url, options);
     const json = await response.json();
 
-    if (json.published_at)
+    if (json.published_at) {
       displayMessage("success", "Product added", ".message-container");
+    }
 
     if (json.error)
       displayMessage("error", "Could not add product", ".message-container");
@@ -90,3 +95,7 @@ function isChecked() {
 }
 
 checkbox.addEventListener("click", isChecked);
+
+function checkPrice(price) {
+  if (price.length === 0 || isNaN(price)) return true;
+}

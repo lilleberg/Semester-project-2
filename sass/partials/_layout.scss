@@ -7,6 +7,10 @@ html {
   height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
