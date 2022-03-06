@@ -35,5 +35,3 @@ const url = baseUrl + "/products?featured=true";
     console.log(error);
   }
 })();
-
-/* displayMessage("error", "Uh oh, something's gone wrong on our end!", ".message-container"); */

@@ -1,5 +1,5 @@
 import createMenu from "./ui/createMenu.js";
-import { addToCart, clearCart, getCart } from "./utils/storage.js";
+import { clearCart, getCart } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import { cartAmount } from "./ui/cartAmount.js";
 import displayMessage from "./ui/displayMessage.js";
@@ -68,25 +68,3 @@ function createHTML(prod) {
     </div>
   `;
 }
-
-/* function createHTMLCart(cart) {
-  cart.forEach((prod) => {
-    price = parseFloat(prod.price);
-    sum += price;
-    total = sum + delivery;
-
-    sumContainer.innerHTML = `$${sum}`;
-    totalContainer.innerHTML = `$${total}`;
-
-    container.innerHTML += `
-    <div class="cart__prod d-grid mb-4">
-      <a href="product_specific.html?id=${prod.id}" class="d-flex">
-        <img src="${baseUrl}${prod.image.url}" class="cart__img" alt="${prod.image.alternativeText}" />
-        <p class="cart__title ml-4">${prod.title}</p>
-      </a>
-      <p class="cart__price">$${prod.price}</p>
-      <i class="fa-solid fa-xmark remove-prod mr-2" data-remove="${prod.id}"><span class="sr-only">Remove product</span></i>
-    </div>
-  `;
-  });
-} */
