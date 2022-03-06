@@ -49,6 +49,7 @@
   .bag-icon {
     justify-self: start;
     width: fit-content;
+    padding: 4px 12px;
   }
 
   &__link,
@@ -56,7 +57,7 @@
     text-align: center;
 
     &:hover {
-      color: lighten($color-black, 30%);
+      color: $lighten-hover;
     }
 
     &--active {
@@ -73,7 +74,7 @@
     border: none;
 
     &:hover {
-      color: lighten($color-black, 30%);
+      color: $lighten-hover;
     }
   }
 

@@ -1,5 +1,5 @@
 import createMenu from "./ui/createMenu.js";
-import { clearCart, getCart } from "./utils/storage.js";
+import { addToCart, clearCart, getCart } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import { cartAmount } from "./ui/cartAmount.js";
 import displayMessage from "./ui/displayMessage.js";
@@ -9,13 +9,11 @@ cartAmount();
 emptyCartMessage();
 
 const container = document.querySelector(".cart__items");
+const totalContainer = document.querySelector(".cost__total");
+const sumContainer = document.querySelector(".cost__sum");
 
 function viewProducts() {
-  const totalContainer = document.querySelector(".cost__total");
-  const sumContainer = document.querySelector(".cost__sum");
-
   const cart = getCart();
-  console.log(cart);
 
   let total = 0;
   let price = 0;
@@ -42,11 +40,7 @@ emptyBtn.onclick = function () {
   document.querySelector(".cart-container").style.display = "none";
   cartAmount();
 
-  displayMessage(
-    "normal-message",
-    "No products added to cart.",
-    ".message-container"
-  );
+  emptyCartMessage();
 };
 
 function emptyCartMessage() {
@@ -74,3 +68,25 @@ function createHTML(prod) {
     </div>
   `;
 }
+
+/* function createHTMLCart(cart) {
+  cart.forEach((prod) => {
+    price = parseFloat(prod.price);
+    sum += price;
+    total = sum + delivery;
+
+    sumContainer.innerHTML = `$${sum}`;
+    totalContainer.innerHTML = `$${total}`;
+
+    container.innerHTML += `
+    <div class="cart__prod d-grid mb-4">
+      <a href="product_specific.html?id=${prod.id}" class="d-flex">
+        <img src="${baseUrl}${prod.image.url}" class="cart__img" alt="${prod.image.alternativeText}" />
+        <p class="cart__title ml-4">${prod.title}</p>
+      </a>
+      <p class="cart__price">$${prod.price}</p>
+      <i class="fa-solid fa-xmark remove-prod mr-2" data-remove="${prod.id}"><span class="sr-only">Remove product</span></i>
+    </div>
+  `;
+  });
+} */

@@ -2,8 +2,16 @@ import { getCart, addToCart } from "../utils/storage.js";
 import { cartAmount } from "./cartAmount.js";
 
 export default function toggleProductCart() {
-  this.classList.toggle("fa-plus");
-  this.classList.toggle("fa-minus");
+  const icon = document.querySelector("#buy i");
+  icon.classList.toggle("fa-plus");
+  icon.classList.toggle("fa-minus");
+
+  let btnText = document.querySelector(".btn-text");
+  if (btnText.innerHTML === "Add to cart") {
+    btnText.innerHTML = "Remove";
+  } else {
+    btnText.innerHTML = "Add to cart";
+  }
 
   const id = this.dataset.id;
   const title = this.dataset.title;

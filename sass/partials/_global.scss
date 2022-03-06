@@ -7,6 +7,7 @@ $color-success: rgb(31, 117, 31);
 
 $btn-yw-hover: darken($color-primary, 10%);
 $btn-blue-hover: darken($color-secondary, 30%);
+$lighten-hover: lighten($color-black, 30%);
 
 $thick-border-blue: 3px solid $color-secondary;
 $border-radius: 5px;
@@ -63,8 +64,8 @@ i {
 
 .amount-cart {
   position: absolute;
-  top: 3px;
-  right: 5px;
+  top: -2px;
+  right: 2px;
   color: $color-white;
   background-color: $color-black;
   border-radius: 50%;
