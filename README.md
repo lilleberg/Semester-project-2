@@ -14,8 +14,8 @@ Strapi is used for the backend. LocalStorage is used to save the JWT.
 ## Built with
 
   - HTML
-  - Sass
   - JavaScript
+  - [Sass](https://sass-lang.com/)
 
 ## Getting started
 
