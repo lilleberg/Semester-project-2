@@ -34,3 +34,6 @@ git clone https://github.com/lilleberg/Semester-project-2.git
   2. Make changes you want
   3. Commit to a separate branch
   4. Create a pull request
+
+## Contact
+[My LinkedIn profile](https://www.linkedin.com/in/maria-lilleberg/)
