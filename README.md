@@ -1,7 +1,7 @@
 # Shoes Up
 **Semester Project 2**
 
-![Screenshot of Shoes Up's homepage](https://i.postimg.cc/QtGLPjZr/shoes-up.png)
+![Screenshot of Shoes Up's homepage](https://i.postimg.cc/W10Lx6d7/shoes-up.png)
 
 For Semester Project 2 the brief was to create a website for selling shoes. An admin can also sign in to add, edit and delete products.
 ***
