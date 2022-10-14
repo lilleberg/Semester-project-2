@@ -8,7 +8,7 @@ For Semester Project 2 the brief was to create a website for selling shoes. An a
 
 ## Description
 
-This project is a website where users can add products to the cart. An admin can also sign in and be able to add, edit and delete products. We also had a focus on certain design elements learnt Design 2. 
+This project is a website where users can add products to the cart. An admin can also sign in and be able to add, edit and delete products. We also had a focus on certain design elements learnt in Design 2. 
 Strapi is used for the backend. LocalStorage is used to save the JWT.
 
 ## Built with
